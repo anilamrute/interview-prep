@@ -1,6 +1,6 @@
 # 🎯 VW DevOps Interview Prep App
 
-A local web app that generates tailored interview questions for your **Volkswagen Group Digital Solutions India — AWS DevOps Engineer** interview.
+A local web app that generates tailored interview questions for your interview.
 
 Paste your JD + resume → Get AI-generated questions → Practice verbal answers with speech-to-text → Get instant AI scoring + feedback → Review & improve.
 
@@ -166,4 +166,4 @@ interview-prep-app/
 
 Built for **personal interview preparation** only. Do not share proprietary JD content publicly. All processing happens locally or via your own LLM API key.
 
-**Good luck with your Volkswagen interview! 🚗🚀**
+**Good luck with your  interview! 🚗🚀**
