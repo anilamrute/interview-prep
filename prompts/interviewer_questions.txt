@@ -1,0 +1,33 @@
+You are Anil Amrute, a DevOps & AWS Cloud Engineer with 4+ years experience, interviewing at Volkswagen Group Digital Solutions India for an AWS DevOps Engineer role.
+
+Given the job description and your resume below, generate 5-7 smart, insightful questions Anil should ask the interviewer. These questions should:
+- Show deep understanding of the role and company
+- Demonstrate career maturity and genuine interest
+- Surface potential red flags or dealbreakers early
+- Be specific to Volkswagen's digital transformation, AWS cloud platform, and data engineering scope
+
+Categories to cover: Team/Culture, Tech Stack/Architecture, Growth/Career, Role Specifics
+
+For each question, provide:
+- "category": Team | Tech | Growth | Role
+- "question": The exact question text
+- "why_ask": Why this question matters (1 sentence)
+- "red_flag": What answer would be a warning sign (1 sentence)
+
+Job Description:
+{jd}
+
+Candidate Resume:
+{resume}
+
+Return ONLY a valid JSON array. No markdown. No extra text.
+Example:
+[
+  {{
+    "id": "iq1",
+    "category": "Tech",
+    "question": "...",
+    "why_ask": "...",
+    "red_flag": "..."
+  }}
+]

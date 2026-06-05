@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review — VW Interview Prep</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎯 VW DevOps Interview Prep</h1>
+      <nav class="nav">
+        <a href="/">Input</a>
+        <a href="/dashboard">Practice</a>
+        <a href="/results">Review</a>
+      </nav>
+    </header>
+
+    <div id="noSession" class="card">
+      <h2>No session loaded</h2>
+      <p class="small">Go back to <a href="/">Input</a> and generate questions first.</p>
+    </div>
+
+    <div id="resultsArea" class="hidden">
+      <div class="card">
+        <h2>Your Progress</h2>
+        <div class="flex" style="gap:20px;flex-wrap:wrap;">
+          <div class="feedback-card"><h4>Total Questions</h4><div id="totalQ" style="font-size:1.5rem;font-weight:700;">0</div></div>
+          <div class="feedback-card"><h4>Answered</h4><div id="answeredQ" style="font-size:1.5rem;font-weight:700;">0</div></div>
+          <div class="feedback-card"><h4>Average Score</h4><div id="avgScore" style="font-size:1.5rem;font-weight:700;">0</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Question Review</h2>
+        <table>
+          <thead><tr><th>#</th><th>Category</th><th>Question</th><th>Score</th><th>Action</th></tr></thead>
+          <tbody id="resultsTable"></tbody>
+        </table>
+      </div>
+
+      <div class="card" id="interviewerQsCard">
+        <h2>💡 Questions to Ask the Interviewer</h2>
+        <div id="interviewerQs"></div>
+      </div>
+    </div>
+  </div>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice — VW Interview Prep</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎯 VW DevOps Interview Prep</h1>
+      <nav class="nav">
+        <a href="/">Input</a>
+        <a href="/dashboard">Practice</a>
+        <a href="/results">Review</a>
+      </nav>
+    </header>
+
+    <div id="noSession" class="card">
+      <h2>No session loaded</h2>
+      <p class="small">Go back to <a href="/">Input</a> and generate questions first.</p>
+    </div>
+
+    <div id="practiceArea" class="hidden">
+      <div class="grid grid-2">
+        <div>
+          <div class="card">
+            <h2>Categories</h2>
+            <div class="categories" id="categories"></div>
+          </div>
+          <div id="questionList"></div>
+        </div>
+        <div>
+          <div class="card" id="activeQuestionCard">
+            <div class="flex" style="justify-content:space-between;align-items:flex-start;">
+              <div>
+                <span class="difficulty" id="qDifficulty"></span>
+                <span class="badge" id="qCategory" style="margin-left:8px;"></span>
+              </div>
+            </div>
+            <h2 class="mt" id="qText"></h2>
+            <p class="small mt" id="qLooking"></p>
+
+            <div class="mt flex">
+              <button class="btn btn-primary" id="speakBtn" onclick="toggleSpeech()">🎙️ Speak Answer</button>
+              <button class="btn btn-success" id="evalBtn" onclick="evaluateAnswer()">✅ Get Feedback</button>
+              <span class="loading" id="evalLoading">Evaluating... ⏳</span>
+            </div>
+
+            <div class="mt">
+              <label>Your Answer (editable):</label>
+              <div id="transcriptBox" contenteditable="true">Click "Speak Answer" and start talking, or type directly here...</div>
+            </div>
+          </div>
+
+          <div class="card hidden" id="feedbackCard">
+            <h2>Feedback</h2>
+            <div class="flex" style="gap:20px;align-items:center;">
+              <div class="score-circle" id="scoreCircle" style="--score:0;"><span id="scoreVal">0</span></div>
+              <div>
+                <div class="small">Technical Accuracy: <span id="techAcc"></span>/10</div>
+                <div class="small">Completeness: <span id="compScore"></span>/10</div>
+                <div class="small">Clarity: <span id="clarityScore"></span>/10</div>
+              </div>
+            </div>
+            <div class="feedback-grid mt">
+              <div class="feedback-card"><h4>✅ What was good</h4><div id="whatGood"></div></div>
+              <div class="feedback-card"><h4>⚠️ What was missing</h4><div id="whatMissing"></div></div>
+              <div class="feedback-card"><h4>💡 How to improve</h4><div id="howImprove"></div></div>
+            </div>
+            <div class="mt">
+              <h4>📝 Model Answer</h4>
+              <div class="card" style="background:#0b1220;" id="modelAnswer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/static/js/app.js"></script>
+  <script src="/static/js/speech.js"></script>
+</body>
+</html>

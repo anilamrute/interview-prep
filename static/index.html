@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VW DevOps Interview Prep</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎯 VW DevOps Interview Prep</h1>
+      <nav class="nav">
+        <a href="/">Input</a>
+        <a href="/dashboard">Practice</a>
+        <a href="/results">Review</a>
+      </nav>
+    </header>
+
+    <div class="card">
+      <h2>1. Paste Job Description</h2>
+      <textarea id="jd" placeholder="Paste the full job description here..."></textarea>
+    </div>
+
+    <div class="card">
+      <h2>2. Paste Your Resume</h2>
+      <textarea id="resume" placeholder="Paste your resume here..."></textarea>
+    </div>
+
+    <div class="flex mt">
+      <button class="btn btn-primary" id="generateBtn" onclick="generate()">✨ Generate Questions</button>
+      <span class="loading" id="loading">Generating... ⏳</span>
+    </div>
+
+    <p class="small mt">Tip: Use Groq free tier (console.groq.com) for fastest setup. No GPU needed.</p>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+  <script>
+    document.getElementById('jd').value = `Dear Candidate,
+
+Volkswagen Group Digital Solutions India is currently looking to hire talented professionals for the position of AWS DevOps Engineer to join our dynamic team. Please find the job details below:
+
+Work Mode: Hybrid
+Job Location: Pune
+Experience: 4-6yrs
+
+Key Responsibilities:
+
+Define repo bootstrapping patterns: branching, protection rules, CI/CD workflow templates, quality gates.
+Own RVS bootstrapping (standards, connectivity, credentials lifecycle) and integration runbooks for Snowflake/Databricks/RVS/Power BI/Tableau.
+Govern Shared Services: cross platform documentation, operational readiness reviews, release/change calendars with ACS/GITC.
+Drive operational observability (SLIs/SLOs), alert tuning, and pre flight checks for integrations.
+Harden access & identity around integrated platforms; ensure audits/SoD compliance.
+Apply repo bootstrapping templates: create repos, protection rules, branching model, seed CI/CD pipelines, secrets.
+Perform RVS bootstrapping: configuration, connectivity checks, credentials rotation per policy.
+Execute integration tasks for Snowflake/Databricks/RVS/Power BI/Tableau: set roles/permissions, validate connectors, smoke tests.
+Maintain shared services: update runbooks/Confluence, support release windows, coordinate with ACS/GITC.
+Operate observability dashboards; raise PRs to improve automation and quality gates (New Relic/SonarQube).
+Track ticket hygiene and deliverables to SLA; provide clear stakeholder communication.
+
+Skill Domain Level
+
+Databricks - Intermediate
+Snowflake - Intermediate
+Infrastructure as Code - Intermediate
+Version Control & CI/CD - Advanced
+Scripting & Automation - Advanced
+Cloud Platforms - Advanced
+Kubernetes/Containers - Intermediate
+Data Platforms (Snowflake/Databricks/Redshift/LF/RDBMS) - Intermediate-Advanced
+Data Pipelines (Glue/Step Functions/PySpark/Kinesis) - Intermediate-Advanced
+Data Engineering - Intermediate
+Access & Identity - Advanced
+Security & Compliance (WIZ, policies/audit) - Advanced
+FinOps - Essential-Intermediate
+Project/Service Mgmt (ITIL/Agile) - Intermediate-Advanced
+Interpersonal/Stakeholder mgmt - Advanced
+Observability/Quality (New Relic, SonarQube) - Advanced
+Visualization – Tableau (Admin/Performance/REST/Tabcmd) - Advanced`;
+
+    document.getElementById('resume').value = `DevOps & AWS Cloud Engineer
+anilamrute1@gmail.com | +91 9136590301 | linkedin.com/in/anil-amrute | Pune, Maharashtra
+
+Summary
+Results-driven DevOps & AWS Cloud Engineer with 4+ years of experience designing, automating, and securing scalable cloud infrastructure. Delivered 20% reduction in deployment times and 20% cost savings through Kubernetes adoption and CI/CD pipeline engineering. Proven expertise in containerization (Docker/Kubernetes), Infrastructure as Code (Terraform), security vulnerability management, and platform reliability engineering across AWS environments.
+
+Skills
+Cloud Platforms : AWS (EC2, VPC, IAM, S3, ALB, Route53, DynamoDB, EKS, ECR, CloudWatch), Azure
+CI/CD & Automation : Jenkins, GitHub Actions, ArgoCD, GitLab CI, Gradle, Maven, JFrog Artifactory
+Containerization & Orchestration : Docker, Kubernetes (AKS/EKS), Helm
+Infrastructure as Code (IaC) : Terraform, Ansible, CloudFormation, YAML-based Automation
+Security & Vulnerability Mgmt : AWS IAM, VPC Security Groups, SSL/TLS, Secrets Management, Namespace Isolation
+Monitoring & Observability : Prometheus, Grafana, CloudWatch, Azure Monitor, ELK Stack
+Scripting & Programming : Shell (Bash), Python
+Version Control & Config Mgmt : Git, GitHub, GitLab, Ansible
+Tools & Environments : Jira, Confluence, ServiceNow, Linux/Unix
+
+Experience
+Jan 2023 – Present | Cognizant | Pune, India | Junior DevOps Engineer
+- Reduced build and deployment times by 20% by redesigning CI/CD pipelines for Java applications using Gradle and GitHub Actions.
+- Pioneered Kubernetes (EKS/AKS) adoption org-wide, orchestrating containerized workloads — achieving 20% reduction in infrastructure costs.
+- Containerized microservices for 3 cross-functional development teams using Docker and Kubernetes.
+- Architected Terraform IaC for microservices and Kubernetes infrastructure on AWS.
+- Established org-wide Terraform remote backend with S3 state storage and DynamoDB locking.
+- Engineered security controls including AWS IAM policies, VPC security groups, namespace isolation, and Secrets management.
+- Configured Route53 + ALB integration for custom domain routing in Kubernetes.
+- Managed AWS networking (VPC, ALB, EC2, IAM) — diagnosed critical VPC peering incidents.
+- Standardized Git branching strategies and webhook configurations across 3+ teams.
+- Configured Prometheus and Grafana monitoring dashboards and CloudWatch alarms.
+
+Jun 2022 – Dec 2022 | Cybeam | Pune, India | Production Support Engineer
+- Built and maintained CI/CD pipelines using Jenkins, Maven, JFrog Artifactory, Git, and Ansible.
+- Automated Unix infrastructure patch management across production servers using Ansible playbooks.
+- Developed Shell scripts for automated node health monitoring.
+- Optimized Git repository structures and workflow configurations.
+
+Education
+2018 – 2021 | University of Mumbai | B.Sc. — Information Technology & Computer Science
+
+Certifications
+- AWS Certified Cloud Practitioner`;
+  </script>
+</body>
+</html>

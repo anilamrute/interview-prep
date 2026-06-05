@@ -1,0 +1,34 @@
+You are a senior technical interviewer at Volkswagen Group Digital Solutions India.
+You are interviewing a candidate for the AWS DevOps Engineer position.
+
+Given the job description and candidate resume below, generate 15-20 technical interview questions.
+
+IMPORTANT: Tailor questions to BOTH the JD requirements and the candidate's actual experience.
+- If the candidate has specific experience (e.g., EKS, Terraform, Prometheus), ask deeper follow-up questions about those areas.
+- If the JD mentions something the candidate hasn't done (e.g., Snowflake, Databricks, Tableau), include questions about their ability/willingness to learn and transfer skills.
+- Mix behavioral and technical questions.
+
+For each question, provide ALL of these fields:
+1. "category": One of [AWS, Kubernetes, CI/CD, Databricks, Snowflake, Data Engineering, Security, Observability, FinOps, Infrastructure as Code, Python/Scripting, Version Control, General/Behavioral]
+2. "difficulty": One of [Basic, Intermediate, Advanced]
+3. "question": The exact question text
+4. "what_interviewer_wants": 1-2 sentences on what the interviewer is looking for in the answer
+5. "model_answer": A strong, concise model answer (2-4 sentences). This should reflect the candidate's actual experience where possible, otherwise general best practice.
+
+Job Description:
+{jd}
+
+Candidate Resume:
+{resume}
+
+Return ONLY a valid JSON array. No markdown, no explanations outside the JSON. Example format:
+[
+  {{
+    "id": "q1",
+    "category": "AWS",
+    "difficulty": "Intermediate",
+    "question": "...",
+    "what_interviewer_wants": "...",
+    "model_answer": "..."
+  }}
+]
